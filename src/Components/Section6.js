@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./App.css";
 import Grid from "@material-ui/core/Grid";
 
 /////////////////////// AppBar
@@ -24,19 +23,13 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 
-import backgroundImage from "./MacNutTree.jpg";
-
-import Section1 from "./Components/Section1";
-import Section2 from "./Components/Section2";
-import Section3 from "./Components/Section3";
-import Section4 from "./Components/Section4";
-import Section5 from "./Components/Section5";
-import Section6 from "./Components/Section6";
-import Section7 from "./Components/Section7";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    paddingTop: 50,
+    paddingBottom: 50,
+    paddingLeft: 50,
+    justifyContent: "center",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -49,14 +42,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
-  paperContainer: {
-    backgroundImage: `url(${backgroundImage})`,
-    opacity: 0.8,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    flexGrow: 1,
-    height: 400,
-  },
+
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -74,46 +60,69 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const theme2 = {
-  padding: 1,
-};
+const ranking = [
+  {
+    sectionName: "Regions",
+    data: [
+      "North Africa",
+      "Eastern Africa",
+      "Middle Africa",
+      "Southern Africa",
+      "Western Africa",
+      "All Africa",
+    ],
+  },
+  {
+    sectionName: "Top Countries",
+    data: [
+      "South Africa",
+      "Morocco",
+      "Egypt",
+      "Ethopia",
+      "Ghana",
+      "Ivory Coast",
+    ],
+  },
+  {
+    sectionName: "Trending Products",
+    data: [
+      "Macadimia",
+      "Cashew Nuts",
+      "Black Cumin",
+      "Sesame",
+      "Cocoa",
+      "Pineapple",
+    ],
+  },
+  {
+    sectionName: "Top Categories",
+    data: [
+      "Herbs and Spices",
+      "Grains, Cereals and Legumes",
+      "Processed and Agro commodities",
+      "Friuts and Vegetables",
+      "Fish and Seafood",
+      "Nuts and Oilseeds",
+    ],
+  },
+];
 
-function App() {
+export default function Section6() {
   const classes = useStyles();
-
-  console.log({ Image });
-
   return (
-    <div className="App">
-      <Grid container className={classes.root}>
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
-      </Grid>
-    </div>
+    <Grid container className={classes.root}>
+      {ranking.map((rank) => (
+        <Grid item xs={3} style={{ justifyContent: "flex-start" }}>
+          <Typography variant="h5" align="left">
+            {rank.sectionName}
+          </Typography>
+          {rank.data.map((item) => (
+            <Typography variant="body1" align="left">
+              {item}
+            </Typography>
+          ))}
+        </Grid>
+      ))}
+    </Grid>
   );
 }
-
-export default App;
-
-/*
-<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-*/

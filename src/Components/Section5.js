@@ -1,6 +1,5 @@
 import React from "react";
 
-import "./App.css";
 import Grid from "@material-ui/core/Grid";
 
 /////////////////////// AppBar
@@ -24,19 +23,12 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 import LocalShippingIcon from "@material-ui/icons/LocalShipping";
 
-import backgroundImage from "./MacNutTree.jpg";
-
-import Section1 from "./Components/Section1";
-import Section2 from "./Components/Section2";
-import Section3 from "./Components/Section3";
-import Section4 from "./Components/Section4";
-import Section5 from "./Components/Section5";
-import Section6 from "./Components/Section6";
-import Section7 from "./Components/Section7";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    paddingTop: 50,
+    paddingBottom: 50,
+    justifyContent: "center",
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -49,14 +41,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
-  paperContainer: {
-    backgroundImage: `url(${backgroundImage})`,
-    opacity: 0.8,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    flexGrow: 1,
-    height: 400,
-  },
+
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
@@ -74,46 +59,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const theme2 = {
-  padding: 1,
-};
+const insights = [
+  {
+    buttonName: "Market Insights",
+    data: "",
+  },
+  {
+    buttonName: "Export Insights",
+    data: "",
+  },
+  {
+    buttonName: "Price Insights",
+    data: "",
+  },
+];
 
-function App() {
+export default function Section5() {
   const classes = useStyles();
-
-  console.log({ Image });
-
   return (
-    <div className="App">
-      <Grid container className={classes.root}>
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
+    <Grid container className={classes.root}>
+      <Grid item xs={12}>
+        <Typography variant="h3">Kone Insights</Typography>
       </Grid>
-    </div>
+      <Typography variant="h5">
+        Africa's most comprehansive AI-powered tool that analyzes big data and
+        generates valuable insights on food and agriculture
+      </Typography>
+
+      {insights.map((insight) => (
+        <Grid item xs={4} style={{ padding: 10 }}>
+          <Button>{insight.buttonName}</Button>
+        </Grid>
+      ))}
+    </Grid>
   );
 }
-
-export default App;
-
-/*
-<header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
-*/
