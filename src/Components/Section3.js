@@ -56,27 +56,27 @@ const produceCatagories = [
   {
     key: 0,
     name: "Grains and Pulses",
-    picture: "./MacNutTree.jpg",
+    picture: "./grainsAndPulses.jpg",
   },
   {
     key: 1,
     name: "Fruits and Vegetables",
-    picture: "./MacNutTree.jpg",
+    picture: "./fruitsAndVegetables.jpg",
   },
   {
     key: 2,
     name: "Agro Commodities",
-    picture: "./MacNutTree.jpg",
+    picture: "./agroCommodities.jpg",
   },
   {
     key: 3,
     name: "Meat and Livestock",
-    picture: "./MacNutTree.jpg",
+    picture: "./meatAndLivestock.jpg",
   },
   {
     key: 4,
     name: "Herbs and Spices",
-    picture: "./MacNutTree.jpg",
+    picture: "./herbsAndSpices.jpg",
   },
   {
     key: 5,
