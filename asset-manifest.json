@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/farm-app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/farm-app/static/js/main.86dcd9ec.chunk.js",
+    "main.js.map": "/farm-app/static/js/main.86dcd9ec.chunk.js.map",
+    "runtime-main.js": "/farm-app/static/js/runtime-main.8c32ec1b.js",
+    "runtime-main.js.map": "/farm-app/static/js/runtime-main.8c32ec1b.js.map",
+    "static/js/2.ed0b62d2.chunk.js": "/farm-app/static/js/2.ed0b62d2.chunk.js",
+    "static/js/2.ed0b62d2.chunk.js.map": "/farm-app/static/js/2.ed0b62d2.chunk.js.map",
+    "index.html": "/farm-app/index.html",
+    "precache-manifest.f1edd78cca9c5c0b4fd6e4f0e89b3ba0.js": "/farm-app/precache-manifest.f1edd78cca9c5c0b4fd6e4f0e89b3ba0.js",
+    "service-worker.js": "/farm-app/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/farm-app/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.ed0b62d2.chunk.js.LICENSE.txt": "/farm-app/static/js/2.ed0b62d2.chunk.js.LICENSE.txt",
+    "static/media/MacNutTree.jpg": "/farm-app/static/media/MacNutTree.a2c0ea49.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c32ec1b.js",
+    "static/js/2.ed0b62d2.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.86dcd9ec.chunk.js"
+  ]
+}
